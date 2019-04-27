@@ -1,0 +1,7 @@
+body {
+    background-image: url("../images/old-steel.jpg");
+  }
+
+.jumbotron {
+    opacity: 0.7;
+}

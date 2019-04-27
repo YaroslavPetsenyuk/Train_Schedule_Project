@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Train Schedule Project</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Anytime is Train Time</h1>
+            <p class="lead">Choo Choo... Chaga Chaga!!!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table" id="added-trains">
+                            <thead>
+                                <h3>Current Train Schedule</h3>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (Min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="train-table-body">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Add Train</h3>
+                        <form>
+                            <label for="train-name">Train Name</label>
+                            <input class="form-control" type="text" placeholder="Enter a train name" id="train-name">
+                            <br>
+                            <label for="destination">Destination</label>
+                            <input class="form-control" type="text" placeholder="Enter the destination of the Train"
+                                id="destination">
+                            <br>
+                            <label for="train-time">First Train Time (HH:MM - Military Time)</label>
+                            <input class="form-control" type="text" placeholder="Enter time of the first train"
+                                id="train-time">
+                            <br>
+                            <label for="frequency">Frequency (min)</label>
+                            <input class="form-control" type="text"
+                                placeholder="Enter how often the train arrives in minutes" id="frequency">
+                            <br>
+                            <button type="button" class="btn btn-success" id="sub-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA6PgvGnaPXGYJAIN0D8c2pUBiTgk8Gb-E",
+            authDomain: "first-firebase-project-6f39d.firebaseapp.com",
+            databaseURL: "https://first-firebase-project-6f39d.firebaseio.com",
+            projectId: "first-firebase-project-6f39d",
+            storageBucket: "first-firebase-project-6f39d.appspot.com",
+            messagingSenderId: "919687818844"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript' src='javascript/app.js'></script>
+</body>
+
+</html>
